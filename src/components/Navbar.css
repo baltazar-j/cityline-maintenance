@@ -1,21 +1,26 @@
 :root {
-  --primary-color: #000000;
-  --text-color: #f0f0f0;
-  --padding: 1rem;
-}
-
-.navbar {
+    --primary-color: #000000; /* Keep your primary color */
+    --text-color: #ffffff;     /* Text color */
+    --padding: 1rem;           /* Padding */
+  }
+  
+  body {
+    background-color: #65656567;
+    color: var(--text-color);
+  }
+  
+  .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 4rem 1rem; /* Adjust padding for spacing */
     padding-right: 3rem;
-    background-color: var(--primary-color); /* Optional background color */
+    background-color: var(--primary-color); /* Keep the navbar's background color */
     position: relative; /* Ensure absolute positioning of the logo */
     width: 100vw; /* Make sure the navbar stretches across the full viewport width */
     box-sizing: border-box; /* Includes padding in the width calculation */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.2), var(--primary-color));
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.1), var(--primary-color)); /* You can adjust this gradient if needed */
   }
   
   .logo {
@@ -46,12 +51,13 @@
     font-size: 1rem;
   }
   
+  /* Mobile styling for the hamburger menu */
   @media (max-width: 48rem) { /* 768px = 48rem */
     .nav-links {
-      display: none; /* Hide links for mobile (to add hamburger menu) */
+      display: none; /* Hide links for mobile */
     }
     .navbar {
-        padding: 4.5rem 1rem; /* Adjust padding for spacing */
-      }
+      padding: 4.5rem 1rem; /* Adjust padding for mobile */
+    }
   }
   
