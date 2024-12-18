@@ -1,0 +1,57 @@
+:root {
+  --primary-color: #000000;
+  --text-color: #f0f0f0;
+  --padding: 1rem;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 1rem; /* Adjust padding for spacing */
+    padding-right: 3rem;
+    background-color: var(--primary-color); /* Optional background color */
+    position: relative; /* Ensure absolute positioning of the logo */
+    width: 100vw; /* Make sure the navbar stretches across the full viewport width */
+    box-sizing: border-box; /* Includes padding in the width calculation */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.2), var(--primary-color));
+  }
+  
+  .logo {
+    position: absolute; /* Position the logo in the center */
+    left: 50%;
+    transform: translateX(-50%); /* Center the logo horizontally */
+  }
+  
+  .logo img {
+    height: 19rem; /* Adjust logo size */
+    width: auto; /* Maintain aspect ratio */
+    padding-top: 1rem;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem; /* Space between links */
+    margin: 0;
+    padding: 0;
+    margin-left: auto; /* Push the nav links to the right */
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  
+  @media (max-width: 48rem) { /* 768px = 48rem */
+    .nav-links {
+      display: none; /* Hide links for mobile (to add hamburger menu) */
+    }
+    .navbar {
+        padding: 4.5rem 1rem; /* Adjust padding for spacing */
+      }
+  }
+  
