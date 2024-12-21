@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
@@ -8,6 +8,7 @@ import './Navbar.css';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation(); // Get the current route
 
   const handleMenuToggle = () => {
     setMenuOpen(!menuOpen);
@@ -29,13 +30,19 @@ const Navbar = () => {
       {/* Nav Links */}
       <ul className={`nav-links ${menuOpen ? 'show' : ''}`}>
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/" className={location.pathname === '/' ? 'active' : ''}>
+            Home
+          </Link>
         </li>
         <li>
-          <Link to="/services">Services</Link>
+          <Link to="/services" className={location.pathname === '/services' ? 'active' : ''}>
+            Services
+          </Link>
         </li>
         <li>
-          <Link to="/contact">Contact</Link>
+          <Link to="/contact" className={location.pathname === '/contact' ? 'active' : ''}>
+            Contact
+          </Link>
         </li>
       </ul>
     </nav>

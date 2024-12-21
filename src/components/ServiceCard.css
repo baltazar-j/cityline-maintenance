@@ -1,0 +1,49 @@
+/* CSS for Service Cards */
+.service-card {
+    background-color: #3a3a3a; /* Slightly lighter than --grey */
+    border: 1px solid #4a4a4a; /* Subtle border to distinguish card */
+    border-radius: 8px; /* Rounded corners */
+    padding: 1.5rem; /* Space inside the card */
+    margin: 1rem; /* Space between cards */
+    max-width: 800px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    color: #fff; /* Ensure text stands out */
+    transition: transform 0.2s, background-color 0.2s; /* Smooth hover effect */
+}
+
+.service-card h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+    color: #f0f0f0; /* Slightly lighter heading color */
+}
+
+.service-card p {
+    font-size: 1rem;
+    color: #cccccc; /* Slightly muted paragraph text */
+}
+
+/* Hover effect */
+.service-card:hover {
+    background-color: #464646; /* Slightly darker grey on hover */
+    transform: translateY(-5px); /* Lift the card */
+}
+
+/* Container for cards */
+.services-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap to the next row */
+    justify-content: center; /* Center-align cards */
+    gap: 1rem; /* Space between cards */
+}
+.services-heading {
+    padding: 20px;  /* Adjust padding as needed */
+    text-align: center;
+    font-size: 2rem;
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+  
