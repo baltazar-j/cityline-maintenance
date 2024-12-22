@@ -1,10 +1,10 @@
-:root {
+/* :root {
   --primary-color: #000000;
   --text-color: #ffffff;
   --padding: 1rem;
   --logo-blue: #1AA3E8;
   --grey: #292929;
-}
+} */
 
 body {
   background-color: #65656567;
@@ -64,6 +64,7 @@ body {
   justify-content: space-between;
   width: 25px;
   height: 20px;
+  z-index: 1000;
   margin-left: 1rem;
   cursor: pointer;
 }
@@ -89,6 +90,23 @@ body {
   position: relative;
 }
 
+.phone-icon {
+  display: none; /* Show phone icon on mobile */
+  position: absolute;
+  top: 4rem;
+  right: 2rem;
+}
+
+.phone-link {
+  color: var(--text-color);
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.phone-link i {
+  color: var(--text-color); /* Change color if needed */
+}
+
 
 /* Mobile styling */
 @media (max-width: 48rem) {
@@ -106,6 +124,7 @@ body {
   .nav-links.show {
     display: flex; /* Show the nav links when menu is open */
     background: linear-gradient(to top, var(--primary-color), var(--grey));
+    z-index: 1000;
   }
 
   .nav-links.show li a {
@@ -130,5 +149,9 @@ body {
 
   .hamburger {
     display: flex;
+  }
+
+  .phone-icon{
+    display: flex; 
   }
 }

@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-
+import { FaPhoneAlt } from 'react-icons/fa'; // Import phone icon
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import './Navbar.css';
@@ -45,6 +45,12 @@ const Navbar = () => {
           </Link>
         </li>
       </ul>
+
+      <div className="phone-icon">
+        <a href="tel:+16044997178">
+          <FaPhoneAlt size={30} />
+        </a>
+      </div>
     </nav>
   );
 };

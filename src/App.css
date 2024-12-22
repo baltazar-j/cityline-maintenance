@@ -8,3 +8,11 @@ body {
   margin: 0;
   padding: 0;
 }
+:root {
+  --primary-color: #000000;
+  --text-color: #ffffff;
+  --padding: 1rem;
+  --logo-blue: #1aa9f0;
+  --logo-blue-hover: #1790cc;
+  --grey: #292929;
+}

@@ -1,7 +1,6 @@
 import { useNavigate } from "react-router-dom";  // Import the useNavigate hook
 import ServiceCard from "../components/ServiceCard";
 import "../components/ServiceCard.css";
-import Footer from "../components/Footer";
 
 function Services() {
   const navigate = useNavigate();  // Initialize navigate function

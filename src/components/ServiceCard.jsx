@@ -4,6 +4,7 @@ const ServiceCard = ({ title, description }) => {
     <div className="service-card">
       <h3><strong>{title}</strong></h3>
       <p>{description}</p>
+      <p><strong>Press to Contact!</strong></p>
     </div>
   );
 };
