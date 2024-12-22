@@ -107,7 +107,6 @@ body {
   color: var(--text-color); /* Change color if needed */
 }
 
-
 /* Mobile styling */
 @media (max-width: 48rem) {
   .nav-links {
