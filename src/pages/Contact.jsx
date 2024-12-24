@@ -78,6 +78,7 @@ const Contact = () => {
     />
     <select
       name="service"
+      className="service-mobile"
       value={formData.service}
       onChange={handleChange}
       required

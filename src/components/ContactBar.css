@@ -1,0 +1,52 @@
+/* Contact Bar Styling */
+.contact-bar {
+    display: flex;
+    flex-wrap: wrap; /* Stack items on smaller screens */
+    justify-content: space-around;
+    align-items: center;
+    background-color: #65656567; /* Light background color */
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #ffffff;
+    border-bottom: 1px solid #000000; /* Optional separator */
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between icon and text */
+  }
+  
+  .social-icons .contact-icon {
+    margin-right: 10px; /* Space between social icons */
+    cursor: pointer;
+  }
+  
+  .contact-icon {
+    font-size: 1.2rem;
+    color: var(--logo-blue-hover); /* Match your color theme */
+  }
+  
+  .contact-bar span {
+    font-size: 1rem; /* Adjust text size */
+  }
+  
+  @media (max-width: 768px) {
+    .contact-bar {
+      flex-direction: column; /* Stack items vertically */
+      text-align: center;
+    }
+    .contact-bar span {
+        font-size: 1.5rem; /* Adjust text size */
+      }
+      
+    .contact-icon {
+    font-size: 1.5rem;
+    color: var(--logo-blue-hover); /* Match your color theme */
+    }
+  
+    .contact-item {
+      margin: 5px 0; /* Space between stacked items */
+    }
+  }
+  

@@ -70,6 +70,10 @@
     .form-grid {
       grid-template-columns: 1fr;
     }
+
+    .service-mobile{
+      height: 3rem;
+    }
   
     .contact-container {
       padding: 1rem;

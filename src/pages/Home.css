@@ -27,7 +27,8 @@
     transform: translate(-50%, -50%);
     text-align: center;
     color: white;
-    background: rgba(0, 0, 0, 0.5); /* Optional background overlay */
+    /* Optional background overlay */
+    background: rgba(0, 0, 0, 0.0); 
     padding: 20px;
     border-radius: 8px;
   }
@@ -132,8 +133,11 @@
   }
   @media (max-width: 768px) {
     .hero {
-      height: 60vh; /* Adjust height for mobile */
+      height: 45vh; /* Adjust height for mobile */
       background-size: cover; /* Ensure proper scaling */
+    }
+    .hero-image{
+      object-fit: fill;
     }
   
     .hero-overlay {

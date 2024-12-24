@@ -1,5 +1,10 @@
 import { useNavigate } from "react-router-dom";
 import "./Home.css"; 
+import ServiceCard from "../components/ServiceCard";
+import "../components/ServiceCard.css";
+import Contact from "./Contact";
+import ContactBar from "../components/ContactBar";
+
 
 function Home() {
   const navigate = useNavigate(); // Initialize useNavigate
@@ -9,13 +14,28 @@ function Home() {
     event.preventDefault(); // Prevent the default form submission behavior
     navigate("/contact"); // Redirect to the contact page
   };
+  const handleCardClick = () => {
+    navigate("/contact");  // Navigate to the contact page when a card is clicked
+  };
+
+  const services = [
+    { title: "Snow Removing / Salting", description: "Ensure safety and accessibility during the winter months with our efficient snow removal and salting services. We help prevent icy hazards and keep your property clear, safe, and functional, no matter how harsh the weather." },
+    { title: "Janitorial Services", description: "Keep your commercial or residential spaces spotless with our comprehensive janitorial services. From daily cleaning to specialized tasks, we deliver a clean and inviting environment tailored to your needs." },
+    { title: "Lawn Maintenance", description: "Maintain a lush, healthy, and well-manicured lawn with our professional lawn care services. From mowing and edging to fertilization and seasonal cleanup, we help your outdoor spaces thrive year-round." },
+    { title: "Dryer Vent Cleaning", description: "Enhance safety and efficiency with our dryer vent cleaning services. We remove lint buildup and blockages, reducing the risk of fires and ensuring optimal appliance performance." },
+    { title: "Property Maintenance", description: "Protect your investment with our reliable property maintenance services. Whether it's routine upkeep or addressing specific concerns, we ensure your property stays in top condition." },
+    { title: "Other Services", description: "Looking for something not listed? We offer a variety of additional services tailored to meet your unique needs. Contact us today to discuss your requirements, and we'll be happy to assist!" },
+    { title: "Service Areas", description: "Our services extend throughout the region, encompassing Vancouver, Richmond, Burnaby, North Vancouver, West Vancouver, Delta, Tsawwassen, and Surrey."}
+  ];
 
   return (
     <div className="home-container">
+      {/* Contact Bar for Mobile */}
+        <ContactBar />
       {/* Hero Section */}
       <div className="hero">
         <img
-          src="/CityLine-Maintenance-Main.svg" // Replace with your hero image path
+          src="/CLM-Nav.svg" // Replace with your hero image path
           alt="Hero"
           className="hero-image"
         />
@@ -63,6 +83,20 @@ function Home() {
         </p>
       </section>
 
+      {/* Services Section for Home */}
+      <section className="our-services">
+        <h2 className="services-heading">Our Services</h2>
+        <div className="services-container" onClick={handleCardClick}>
+          {services.map((service, index) => (
+            <ServiceCard
+              key={index}
+              title={service.title}
+              description={service.description}
+            />
+          ))}
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section className="faq">
         <h2><strong>Frequently Asked Questions</strong></h2>
@@ -89,6 +123,11 @@ function Home() {
           </p>
         </div>
       </section>
+      {/* Contact Card Section */}
+      <section className="contact-section">
+        <Contact />
+      </section>
+
     </div>
   );
 }

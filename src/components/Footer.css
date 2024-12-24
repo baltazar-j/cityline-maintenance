@@ -1,60 +1,118 @@
 .footer {
-    background-color: var(--primary-color); /* Use the same primary color as the navbar */
-    color: white;
-    padding: 4rem 1rem; /* Adjust padding to match the navbar's spacing */
-    box-sizing: border-box;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Same shadow as the navbar */
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), var(--primary-color)); /* Matching gradient */
-    position: relative;
-    width: 100%;
-    border-top: 2px solid #3d3d3d; /* Top border similar to your navbar's bottom border */
-    margin-top: 3rem;
-    text-align: center;
-  }
-  
+  background-color: var(--primary-color); /* Use the same primary color as the navbar */
+  color: white;
+  padding: 4rem 1rem; /* Adjust padding to match the navbar's spacing */
+  box-sizing: border-box;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Same shadow as the navbar */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), var(--primary-color)); /* Matching gradient */
+  position: relative;
+  width: 100%;
+  border-top: 2px solid #3d3d3d; /* Top border similar to your navbar's bottom border */
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  max-width: 800px; /* Increase max-width to allow for more content on larger screens */
+  margin: 0 auto;
+  flex-wrap: wrap; /* Allow wrapping of footer items on smaller screens */
+  padding: 0 20px; /* Padding for content spacing */
+  justify-content: center; /* Center the footer content */
+}
+
+.contact-info {
+  flex: 1;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.contact-info p {
+  margin: 5px 0;
+  font-size: 1.5rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+  flex: 1;
+  justify-content: center;
+  flex-wrap: wrap; /* Wrap links for smaller screens */
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-logo {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-logo img {
+  max-width: 150px;
+  height: auto;
+}
+
+/* Contact bar icons */
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 5px 0;
+}
+
+.contact-icon {
+  font-size: 1.2rem;
+  color: white;
+}
+
+.social-icons .contact-icon {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.contact-icon:hover {
+  color: var(--logo-blue); /* Optional hover color */
+  transform: scale(1.1); /* Slight zoom effect */
+  transition: color 0.3s, transform 0.3s;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
   .footer-content {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1200px; /* Increase max-width to allow for more content on larger screens */
-    margin: 0 auto;
-    flex-wrap: wrap;  /* Allow wrapping of footer items on smaller screens */
-    padding: 0 20px;  /* Padding for content spacing */
-    justify-content: center; /* Center the footer content */
+    flex-direction: column; /* Stack footer items vertically on smaller screens */
+    align-items: center;
   }
-  
-  .contact-info p {
-    margin: 5px 0;
-    font-size: 1.5rem;
-  }
-  
+
   .footer-links {
-    display: flex;
-    gap: 20px;
+    margin-top: 5px;
+    justify-content: center; /* Center the footer links */
   }
-  
+
   .footer-links a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+    margin-top: 1rem; /* Add spacing between links */
   }
-  
-  .footer-links a:hover {
-    text-decoration: underline;
+
+  .footer-logo {
+    order: 3; /* Move logo to the bottom */
+    margin-bottom: 1rem;
   }
-  
-  /* Mobile responsiveness */
-  @media (max-width: 768px) {
-    .footer-content {
-      flex-direction: column;  /* Stack footer items vertically on smaller screens */
-      align-items: center;
-    }
-  
-    .footer-links {
-      justify-content: center; /* Center the footer links */
-    }
-  
-    .footer-links a {
-      margin: 5px 0; /* Add spacing between links */
-    }
+
+  .footer-logo img{
+    max-width: 300px;
   }
-  
+
+  .contact-info {
+    text-align: center; /* Center contact info on smaller screens */
+  }
+}
