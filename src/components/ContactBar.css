@@ -49,4 +49,21 @@
       margin: 5px 0; /* Space between stacked items */
     }
   }
-  
+  @media (max-width: 375px) { /* Specific for 360px width like Samsung S8+ */
+    .contact-bar {
+        padding: 8px 15px; /* Reduce padding for very small screens */
+        font-size: 0.9rem; /* Make the font size smaller for 360px wide screens */
+    }
+
+    .contact-bar span {
+        font-size: 1.3rem; /* Even smaller font size for better fit */
+    }
+
+    .contact-icon {
+        font-size: 1rem; /* Adjust icon size to fit */
+    }
+
+    .contact-item {
+        margin: 3px 0; /* Reduce space between items */
+    }
+}
