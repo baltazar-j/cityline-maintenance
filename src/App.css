@@ -16,4 +16,41 @@ body {
   --logo-blue-hover: #1790cc;
   --grey: #292929;
   --primary-grey:#000000;
+  --input-background: #ccc;
 }
+/* Apply custom styles to autofilled inputs */
+input:-webkit-autofill, textarea:-webkit-autofill {
+  /* -webkit-text-fill-color: var(--input-background) !important; */
+  background-color: #f4f4f400 !important; /* Make sure the background color is transparent or your desired color */
+  color: #000000 !important; /* Adjust the text color */
+  box-shadow: 0 0 0px 1000px var(--input-background) inset !important; /* Prevent the white background */
+  transition: background-color 5000s ease-in-out 0s; /* Smooth transition to the new background */
+}
+
+/* For Firefox */
+input:-moz-autofill, textarea:-moz-autofill {
+  /* -webkit-text-fill-color: var(--input-background) !important; */
+  background-color: #f4f4f4 !important; /* Same as the one for Webkit */
+  color: #333 !important; /* Adjust text color */
+  box-shadow: 0 0 0px 1000px var(--input-background) inset !important; /* Remove the autofill effect */
+}
+
+/* Ensure the rest of your form inputs retain the same appearance */
+input, textarea {
+  background-color: var(--input-background);
+  color: #333;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+/* Prevent the hover effect from changing the background color of autofilled inputs */
+input:-webkit-autofill:hover, textarea:-webkit-autofill:hover,
+input:-moz-autofill:hover, textarea:-moz-autofill:hover {
+  transition: background-color 5000s;
+  -webkit-text-fill-color: #000000 !important;
+  color: #000000;
+  background-color: var(--input-background) !important; /* Ensure the background stays the same on hover */
+  box-shadow: 0 0 0px 1000px var(--input-background) inset !important; /* Keep the same shadow */
+}
+
+

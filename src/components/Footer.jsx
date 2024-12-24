@@ -22,13 +22,13 @@ function Footer() {
             <span>+1 (604) 499-7178</span>
           </div>
           <div className="contact-item social-icons">
-          <a href="https://www.instagram.com/johnbaltazarr/?api=postMessage&hl=en">
+          <a href="">
             <FaInstagram className="contact-icon" />
           </a>
-          <a href="https://www.instagram.com/johnbaltazarr/?api=postMessage&hl=en">
+          <a href="">
             <FaLinkedin className="contact-icon" />
           </a>
-          <a href="https://www.instagram.com/johnbaltazarr/?api=postMessage&hl=en">
+          <a href="">
             <FaFacebook className="contact-icon" />
           </a>
           </div>
